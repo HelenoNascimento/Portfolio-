@@ -472,9 +472,35 @@ header .navbar a:hover{
 .skills_js{
     width: 60%;
 }
+.skills_tailwind{
+    width: 30%;
+}
 .skills_react{
     width: 70%;
 }
+.skills_node{
+    width: 55%;
+}
+.skills_mysql{
+    width: 60%;
+}
+.skills_adaptabilidade{
+    width: 80%;
+}
+.skills_pontualidade{
+    width: 95%;
+}
+.skills_fireBase,
+.skills_java{
+    width: 40%;
+}
+.skills_comprometimento{
+    width: 90%;
+}
+.skills_equipe{
+    width: 82%;
+}
+
 .skills_close .skills_list{
     height: 0;
     overflow: hidden;
@@ -566,7 +592,7 @@ header .navbar a:hover{
     padding-top: 3rem;
 }
 .projeto_container{
-    width: 80%;
+    width: 100%;
     display: flex;
     margin-top: 4rem;
     overflow: hidden;
@@ -611,23 +637,50 @@ header .navbar a:hover{
     position: absolute;
     
     z-index: 99;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
 .slider--control{
+
     margin-top: 6rem;
     width: auto;
     height: auto;
-
-   
     border-radius: 50%;
     overflow: hidden;
+    overflow-x: hidden;
 }
-.slider--control .arrow-icon{
+.arrow-icon{
     font-size: 4rem;
+}
+.slider--control-right,
+.slider--control-left{
+    position: absolute;
+    width: 40px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.6);
+   
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+    
+}
+.slider--control-right{
+    left: 0;
+}
+.slider--control-left{
+    right: 0;
+}
+.projeto_container:hover .slider--control-left,
+.projeto_container:hover .slider--control-right{
+    opacity: 1;
 }
 .projeto_content{
     padding: 0 1.5rem;
@@ -861,6 +914,7 @@ header .navbar a:hover{
     .home{
         width: 100%;
     }
+
     .container-apresent h1{
         font-size: var(--normalG-font-size-name);
     }
@@ -874,6 +928,10 @@ header .navbar a:hover{
         width: 90%;
         justify-content: center;
         align-items: center;
+    }
+    .projeto{
+        width: 100vw;
+        max-width: 100%;
     }
     
     .contato{
@@ -897,7 +955,8 @@ header .navbar a:hover{
         justify-content: center;
     }
     .projeto{
-        width: 90%;
+        width: 100vw;
+        max-width: 100%;
     }
     .outros-projetos{
         width: 100%;

@@ -80,8 +80,8 @@ let totalSlides = document.querySelectorAll('.slider--item').length;
 //console.log(totalSlides)
 document.querySelector(".slider--width").style.width = `calc(450px * ${totalSlides})`;
 
-document.querySelector(".slider--controls").style.height =
-     `${document.querySelector(".projeto").clientHeight}px`;
+//document.querySelector(".slider--controls").style.height =
+  //   `${document.querySelector(".projeto").clientHeight}px`;
 
 function goPrev(){
     currentSlide --;
@@ -111,7 +111,7 @@ function updateMargin() {
     if(larguraTela > 1500){
         newMargin = (currentSlide * document.body.clientWidth) /7;
     }else if(larguraTela >1200 && larguraTela <1500){
-        newMargin = (currentSlide * document.body.clientWidth) /6;
+        newMargin = (currentSlide * document.body.clientWidth) /4;
     }else if(larguraTela >900 && larguraTela <1200){
         newMargin = (currentSlide * document.body.clientWidth) /2.7;
     }else if(larguraTela >600 && larguraTela <800){
@@ -119,7 +119,7 @@ function updateMargin() {
     }else if(larguraTela >550 && larguraTela <650){
         newMargin = (currentSlide * document.body.clientWidth) /1.5;
     }else{
-        newMargin = (currentSlide * document.body.clientWidth) /1;
+        newMargin = (currentSlide * document.body.clientWidth) ;
     }
     
    
@@ -205,26 +205,32 @@ const projetosJavaScript = [
         titulo: "Carrinho compra Pizza",
         descricao: 'Carrinho de compra pizza, Projeto desenvolvido no curso JavaScript b7web',
         imagem: 'image/projetos/carrinhoCompraPizza.jpeg',
+        link: 'https://github.com/HelenoNascimento/Carrinho-compraJS'
     },{
         titulo: "Jogo da Memoria",
         descricao: 'Jogo da memoria ',
         imagem: 'image/projetos/jogoMemoria.jpeg',
+        link: 'https://github.com/HelenoNascimento/JogoMemoria'
     },{
         titulo: "Consulta Cep",
         descricao: 'Desenvolvido um sitema para consultar CEP, pela API viaCEP ',
         imagem: 'image/projetos/ConsultaCep.jpeg',
+        link: 'https://github.com/HelenoNascimento/ConsultaCep'
     },{
         titulo: "Vitrine Bicicleta",
         descricao: 'Uma vitrine para demonstrar biciletas ',
         imagem: 'image/projetos/vitrineBicileta.jpeg',
+        link: 'https://github.com/HelenoNascimento/Vitrine-Bicileta'
     },{
         titulo: "Poke Dex",
         descricao: 'Projeto desenvolvido em uma live no youtube',
         imagem: 'image/projetos/pokedex.jpeg',
+        link: 'https://github.com/HelenoNascimento/Pokedex'
     }, {
         titulo: "Urna eletronica",
         descricao: 'Projeto desenvolvido no curso JavaScript b7web',
         imagem: 'image/projetos/urna.jpeg',
+        link: 'https://github.com/HelenoNascimento/Urna-eletronica'
     },
 ]
 const projetosReact = [
@@ -232,26 +238,32 @@ const projetosReact = [
         titulo: "Clone Netflix",
         descricao: 'Projeto desenvolvido uma live ministrada pelo b7web',
         imagem: 'image/projetos/CloneNetflix.jpeg',
+        link: 'https://github.com/HelenoNascimento/Clone-Netflix'
     }, {
         titulo: "Jogo Memoria",
         descricao: 'Projeto desenvolvido no curso React b7web',
         imagem: 'image/projetos/ReactMemoria.jpeg',
+        link: 'https://github.com/HelenoNascimento/Jogo-memoria-react'
     },{
         titulo: "Ignite Lab",
         descricao: "Projeto desenvolvido durante um Ignite Lab",
         imagem: 'image/projetos/IgniteLab.jpeg',
+        link: 'https://github.com/HelenoNascimento/Event-Plataform'
     } , {
         titulo: "Calculadora IMC",
         descricao: 'Projeto desenvolvido no curso React b7web',
         imagem: 'image/projetos/reactIMC.jpeg',
+        link: 'https://github.com/HelenoNascimento/Calculadora-imc'
     }, {
         titulo: "Movies Lib",
         descricao: 'Projeto desenvolvido uma live do youtube',
         imagem: 'image/projetos/MoviesLib.jpeg',
+        link: 'https://github.com/HelenoNascimento/Movies_lib'
     }, {
         titulo: "Login React Ignite",
         descricao: 'Projeto desenvolvido durante um Ignite Lab',
         imagem: 'image/projetos/reactIgnite.jpeg',
+        link: 'https://github.com/HelenoNascimento/Ignite-lab-desing-system'
     }
 ]
 const createElement  = (tag, className) =>{
@@ -270,7 +282,7 @@ const createProjeto = (todosProejtos) =>{
         titulo.innerHTML = todosProejtos.titulo;
     const  descricao = createElement('p', '');
         descricao.innerHTML = todosProejtos.descricao;
-    const botaoProjeto = createElement('button', 'btn button--flex button-small projeto_button');
+    const botaoProjeto = createElement('a', 'btn button--flex button-small projeto_button');
     const icone = createElement('i','uil uil-arrow-right button_icon');
 
    // projetoImage.style.backgroundImage = `url('../image/projetos/p-o1.jpeg')`;  
@@ -279,6 +291,8 @@ const createProjeto = (todosProejtos) =>{
     projetoImage.appendChild(imagem)
    
     botaoProjeto.innerHTML= "Saber Mais";
+    botaoProjeto.setAttribute('href', todosProejtos.link)
+    botaoProjeto.setAttribute('target','_blank');
     botaoProjeto.appendChild(icone)
     outroProjeto.appendChild(titulo);
     outroProjeto.appendChild(descricao);
