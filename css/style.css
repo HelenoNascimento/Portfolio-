@@ -77,7 +77,7 @@ body{
     max-width: 100%
 }
 .bg-effect{
-    width: 100%;
+    width: auto;
     height: 60px;
   
     text-align: center;
@@ -327,7 +327,7 @@ header .navbar a:hover{
     
   
 }
-.sobre .sobre-container .sobre-direito{
+.sobre-direito{
     width: 55%;
     font-size:var(--normal-font-size);
     color: var(--text-color-gray);
@@ -899,9 +899,10 @@ header .navbar a:hover{
     .projeto{
         width: 90%;
     }
-    .outros-projeto{
+    .outros-projetos{
         width: 100%;
     }
+    
     
     .container-apresent h1{
         font-size: var(--normal-big-font-size-name);
@@ -1028,6 +1029,14 @@ header .navbar a:hover{
         justify-content: center;
         width: 100%;
     }
+    .sobre-direito{
+        width: 100%;
+    }
+    .sobre-direito span{
+       font-size: var(--medium-small-font-size);
+       text-align: center;
+       
+    }
     .outro-projeto{
         width: 500px;
     }
@@ -1048,6 +1057,10 @@ header .navbar a:hover{
         width: 100vw;
         max-width: 100%
     }
+    header{
+        width: 100vw;
+        max-width: 100%;
+    }
     .home{
         width: 100%;
     }
@@ -1057,12 +1070,23 @@ header .navbar a:hover{
     .container-apresent{
         width: 90%;
     }
+    .skills{
+        padding-top: 9rem;
+    }
+    .sobre-direito{
+        width: 100%;
+    }
+    .projeto_container{
+        width: 100vw;
+        max-width: 100%;
+    }
     .outros-projetos{
         width: 100%;
     }
     .outro-projeto{
-        width: 80%;
+        width: 90%;
     }
+
     .black-button.small-button{
         width: 120px;
         height: 35px;
