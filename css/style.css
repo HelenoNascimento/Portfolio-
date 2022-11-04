@@ -1320,6 +1320,17 @@ input[type="checkbox"]{
     .menus-rodape{
         gap: 1rem;
     }
+    .container-apresent{
+        overflow: hidden;
+    }
+    .bg-effect{
+        margin: 0;
+        padding: 0;
+    }
+    .fundo-botao{
+        gap: 2rem;
+        padding: 0;
+    }
 }
 @media (max-width: 200px) {
     body{
