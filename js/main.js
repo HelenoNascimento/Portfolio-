@@ -1,3 +1,5 @@
+
+
 //*************************MENU*************************************************** */
 
 let menu = document.querySelector('#menu-bar');
@@ -273,6 +275,7 @@ const createElement  = (tag, className) =>{
 
 }
 const createProjeto = (todosProejtos) =>{
+   
 
     const outroProjeto = createElement ('div', 'outro-projeto');
     const projetoImage = createElement('div', 'projeto-image');
@@ -284,6 +287,8 @@ const createProjeto = (todosProejtos) =>{
         descricao.innerHTML = todosProejtos.descricao;
     const botaoProjeto = createElement('a', 'btn button--flex button-small projeto_button');
     const icone = createElement('i','uil uil-arrow-right button_icon');
+
+    
 
    // projetoImage.style.backgroundImage = `url('../image/projetos/p-o1.jpeg')`;  
 
@@ -297,7 +302,8 @@ const createProjeto = (todosProejtos) =>{
     outroProjeto.appendChild(titulo);
     outroProjeto.appendChild(descricao);
     outroProjeto.appendChild(botaoProjeto);
-
+    
+   
     return outroProjeto
 }
 
@@ -318,22 +324,26 @@ const items_projeto = document.querySelectorAll('.outro-projeto');
 console.log(items_projeto.length)
 
 function projetoReact () {
+   
     limpaDados();
+    
     projetosReact.forEach((pj) =>{
         const projet = createProjeto(pj);
         projetos.appendChild(projet);
         console.log(projet)
     })
     console.log(items_projeto.length)
+    loadThemaProject();
 }
 function carregaJavascript(){
     limpaDados();
-
+   
     projetosJavaScript.forEach((pj) =>{
         const projet = createProjeto(pj);
         projetos.appendChild(projet);
         console.log(projet)
     })
+    loadThemaProject();
 }
 
 function limpaDados(){
@@ -342,4 +352,105 @@ function limpaDados(){
         item.remove();
     })
     console.log(items_projeto.length)
+}
+//************************************TEMA*********************** */
+
+const chageThemeBtn = document.querySelector("#change-theme");
+
+chageThemeBtn.addEventListener('change', function(){
+    togleDarkMode();
+
+    //salva ou remove o darkmode
+    localStorage.removeItem('dark');
+
+    if(document.body.classList.contains('dark')){
+        localStorage.setItem('dark',1);
+    }
+});
+
+//carrega o tema dark ou light
+function loadTheme(){
+    const darkMode = localStorage.getItem('dark');
+
+    if(darkMode){
+        togleDarkMode();
+    }
+    return darkMode;
+}
+loadTheme();
+
+function loadThemaProject(){
+    const darkMode = localStorage.getItem('dark');
+   console.log(darkMode)
+    if(darkMode == 1){
+        const projetos = document.querySelectorAll('.outro-projeto');
+        projetos.forEach((projeto) =>{
+            projeto.classList.add('second-dark');
+        })
+    }else{
+        document.querySelector('#menu-bar').classList.remove('dark');
+        document.querySelector('.qualification_container').classList.remove('destaque-dark');
+        const projetos = document.querySelectorAll('.outro-projeto');
+        projetos.forEach((projeto) =>{
+            projeto.classList.remove('second-dark');
+        })
+    }
+
+}
+
+function togleDarkMode(){
+    document.body.classList.toggle('dark');
+    document.querySelector('header').classList.toggle('dark');
+    document.querySelector('h3').classList.toggle('dark');
+    document.querySelector('nav').classList.toggle('navbar-dark');
+    document.querySelector('.bg-effect').classList.toggle('bg-dark')
+    document.querySelector('.home').classList.toggle('second-dark')
+    document.querySelector('.sobre-direito').classList.toggle('dark');
+    document.querySelector('.skills').classList.toggle('second-dark');
+    document.querySelector('.qualification_active').classList.toggle('dark');
+   // document.querySelector('.uil-bars').classList.toggle('dark');
+   // document.querySelector('.navbar').classList.toggle('dark');
+
+   if(document.body.classList.contains('uil-bars')){
+    document.querySelector('.uil-bars').classList.toggle('dark');
+   }else if(document.body.classList.contains('uil-times')){
+    document.querySelector('.uil-times').classList.toggle('dark');
+   }
+
+    document.querySelector('.qualification_container').classList.toggle('destaque-dark');
+    document.querySelector('.outros-projetos').classList.toggle('dark');
+    const items = document.querySelectorAll('.item');
+
+    const projetos = document.querySelectorAll('.outro-projeto');
+
+    const ball = document.querySelectorAll('.qualification_rounder')
+    const linha = document.querySelectorAll('.qualification_line');
+    const bolds = document.querySelectorAll('.bold');
+
+    const sliderItens = document.querySelectorAll('.slider--item');
+
+    sliderItens.forEach((slider)=>{
+        slider.classList.toggle('second-dark');
+    })
+   
+
+   bolds.forEach((bold) =>{
+    bold.classList.toggle('dark-bold');
+   })
+
+    items.forEach((item)=>{
+        item.classList.toggle('dark')
+    })
+
+
+    projetos.forEach((projeto) =>{
+        projeto.classList.toggle('second-dark');
+    })
+    linha.forEach((line)=>{
+       line.classList.toggle('dark');
+    })
+    ball.forEach((bola) =>{
+        bola.classList.toggle('dark');
+    })
+
 }

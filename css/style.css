@@ -48,7 +48,24 @@
     --text-color: #fff;
     --text-color-gray: rgb(77, 74, 74);
     --text-gray-100: rgb(138, 135, 135);
+
+    /*color dark mode*/
+
+    --dark-900: #070707;
+    --dark-800: #161616;
+    --dark-600: #363636;
+    --dark-text2: #A7A6A6;
+    --dark-text1: #EEEEEE;
 }
+.uil-sun{
+    display: none;
+    font-size: 2rem;
+}
+.uil-moon{
+    cursor: pointer;
+    font-size: 2rem;
+}
+
 h2{
     font-size: var(--titulo);
 }
@@ -76,10 +93,25 @@ body{
     height: auto;
     max-width: 100%
 }
+
 .bg-effect{
     width: auto;
-    height: 60px;
+    height: auto;
   
+    text-align: center;
+    position: relative;
+    margin-left: 2rem;
+    background-color: #fff;
+    z-index: 0;
+    display: flex;
+    gap: 2rem;
+    border-radius: 10px;
+}
+.fundo-botao{
+    width: auto;
+    height: auto;
+
+
     text-align: center;
     position: relative;
     margin-left: 2rem;
@@ -148,6 +180,7 @@ body{
     color: rgb(7, 6, 6);
     border: 2px solid black;
 }
+
 .center{
     display: flex;
     align-items: center;
@@ -182,7 +215,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 9%;
+    padding: 1rem 9%;
     box-shadow: 0 0.5rem 1rem rgba(0 ,0 ,0 ,.1);
     transition: all ease .5s;
 }
@@ -202,13 +235,23 @@ header .navbar a{
     color: #666;
 }
 header .navbar a:hover{
-    color: rgb(221, 36, 36);
+    color: rgb(250, 143, 3);
 
+}
+.menu-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.menu-bar a{
+  text-decoration: none;
+  color: var(--first-color);
 }
 #menu-bar{
     font-size: 3rem;
     cursor: pointer;
-    color: var(--first-color);
+  
     display: none;
 }   
 
@@ -225,6 +268,7 @@ header .navbar a:hover{
     width: 3vw;
    
 }
+
 .container-apresent{
     width: 55%;
     margin-top: -4rem;
@@ -351,7 +395,7 @@ header .navbar a:hover{
     font-size: var(--small-small-font-size);
     color: var(--text-color-gray);
 }
-.sobre .sobre-container .sobre-direito .itens-sobre .item .bold{
+ .itens-sobre .item .bold{
     font-weight: 800;
     color: var(--first-color);
     font-size: var(--normal-font-size);
@@ -623,6 +667,7 @@ header .navbar a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .projeto_data{
     display: flex;
@@ -867,6 +912,100 @@ header .navbar a:hover{
 }
 .small-button i{
     font: 1rem;
+}
+
+
+
+/************************************DARK MOD*************************/
+.dark .uil-sun{
+    display: block;
+    cursor: pointer;
+   
+}
+.dark .uil-moon{
+    display: none;
+    cursor: pointer;
+}
+.dark .uil-bars{
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--dark-text1) !important;
+}
+.dark .uil-times{
+    cursor: pointer;
+    color: var(--dark-text1);
+    background-color: transparent;
+}
+
+header.active.dark{
+    opacity: .8;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+.dark{
+    background-color: #000;
+   color: var(--dark-text1);
+}
+.dark span{
+    color: var(--dark-text1);
+}
+.dark p{
+    color: var(--dark-text1);
+}
+.dark a{
+    color: var(--dark-text1);
+}
+.dark i{
+    color: var(--dark-text1);
+}
+.dark h3{
+    color: var(--dark-text1);
+}
+.dark nav a{
+    color: var(--dark-text1);
+}
+.dark.item span{
+    color: #EEEEEE;
+}
+.dark-bold{
+    color: #ffffff !important;
+}
+.dark span{
+    color: #fff;
+}
+.navbar-dark{
+
+    color: var(--dark-text1);
+}
+.navbar-dark.a{
+    color: var(--dark-800);
+}
+.second-dark{
+    background-color: var(--dark-600);
+    color: var(--dark-text1);
+}
+.qualification_active.dark{
+    color: #fff;
+}
+.qualification_rounder.dark,
+.qualification_line.dark{
+    background-color: #fff;
+}
+.destaque-dark{
+    background-color: var(--dark-800);
+    padding: 1rem;
+    border: 1px solid #494949;
+    border-radius: 5px;
+}
+.bg-dark{
+    background-color: #fff;
+}
+.border-dark{
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #A7A6A6;
 }
 
 /*animação*/
@@ -1130,7 +1269,8 @@ header .navbar a:hover{
         width: 90%;
     }
     .skills{
-        padding-top: 9rem;
+        padding-top: 4rem;
+        margin-bottom: 5rem;
     }
     .sobre-direito{
         width: 100%;

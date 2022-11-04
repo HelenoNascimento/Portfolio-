@@ -21,10 +21,17 @@
        
         <div class="menu-bar">
             <a href="#">Heleno</a>
+            <label for="change-theme">
+                <i class="uil uil-sun icon"></i>
+                <i class="uil uil-moon icon"></i>
+            </label>
         </div>
+        <input type="checkbox" name="change-theme" id="change-theme"> 
+        
         <div id="menu-bar" class="uil uil-bars"></div>
         
         <nav class="navbar">
+         
             <a href="#home">Home</a>
             <a href="#sobre">Sobre</a>
             <a href="#skills">Skills</a>
@@ -46,21 +53,21 @@
             <span class="text-normal">Eu tenho 27 anos, sou formado em Sistemas de informação, Amante da tecnologia
                 Atualmente estou trabalhando como suporte de TI, estou transição de carreira e 
                 em busca de uma oportunidade para Desenvolvedor</span>
-        <div>
+        <div class="fundo-botao">
             <div class="bg-effect">
                 <a  class="black-button first" href="https://github.com/HelenoNascimento" target="_blank">
                     <i class="uil uil-github icon"></i>
                     GitHub
                 </a>
-                
-                </button>
+            </div>
+            <div class="bg-effect">
                 <a  class="black-button first" href="https://www.linkedin.com/in/heleno-santos-b2b07a132/" target="_blank">
                     <i class="uil uil-linkedin icon"></i>
                     Linkedin
                 </a>
             </div>
            
-        </div>
+         </div>
         </div>
         <div class="container-image">
           <!-- <img src="image/teste.jpg" alt="teste">--> 
@@ -82,6 +89,7 @@
                 <img src="image/eu_sobre.webp" alt="" data-anime="left">
             </div>
             <div class="sobre-direito" data-anime="left">
+                <span>
                 <br>Sou Desenvolver full stack em formação, 9 meses estudando para uma transição de carreira atualmente 
                     trabalho como suporte TI Remoto e esto estudando as principais tecnologias de 
                     desenvolvimento web como por exemplo JavaScrip, ReactJS, NodeJS, TypeScrip.<br/><br/>
@@ -295,7 +303,7 @@
                                 <span class="skills_number">90%</span>
                             </div>
                             <div class="skills_bar">
-                                <span class="skills_percentage skills_css"></span>
+                                <span class="skills_percentage skills_comprometimento"></span>
                             </div>
                         </div>
                         <div class="skills_data">
@@ -304,7 +312,7 @@
                                 <span class="skills_number">82%</span>
                             </div>
                             <div class="skills_bar">
-                                <span class="skills_percentage skills_css"></span>
+                                <span class="skills_percentage skills_equipe"></span>
                             </div>
                         </div>
         
@@ -603,16 +611,21 @@
         
         <h2>Outros projetos</h2>
         <div class="projeto-tecnologias">
-            <div class="bg-effect center">
-                <button class="black-button small-button" onclick="carregaJavascript()">
-                    <i class="uil uil-java-script"></i>
-                    JavaScript
-                </button>   
-                <button class="black-button small-button" onclick="projetoReact()">
-                    <i class="uil uil-react"></i>
-                    React
-                </button> 
+            <div class="fundo-botao" >
+                <div class="bg-effect center">
+                    <button class="black-button small-button" onclick="carregaJavascript()">
+                        <i class="uil uil-java-script"></i>
+                        JavaScript
+                    </button>   
+                </div>
+                <div class="bg-effect center">
+                    <button class="black-button small-button" onclick="projetoReact()">
+                        <i class="uil uil-react"></i>
+                        React
+                    </button> 
+                </div>
             </div>
+          
         </div>
         <div class="projetos" data-anime="bottom">
             
