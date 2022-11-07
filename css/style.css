@@ -975,13 +975,7 @@ input[type="checkbox"]{
 .dark span{
     color: #fff;
 }
-.navbar-dark{
 
-    color:var(--dark-900);
-}
-.navbar-dark a{
-    color:var(--dark-900) !important;
-}
 .second-dark{
     background-color: var(--dark-600);
     color: var(--dark-text1);
@@ -1178,12 +1172,15 @@ input[type="checkbox"]{
         border: .2rem solid rgba(0 ,0 ,0 ,.1);
         border-left: .5rem solid var(--red);
         background: #fff;
+        color: var(--dark-900);
     }
 
     .home{
         width: 100vw;
         max-width: 100%
     }
+ 
+   
 
     .black-button.first{
         width: 180px;
