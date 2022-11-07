@@ -977,17 +977,20 @@ input[type="checkbox"]{
 }
 .navbar-dark{
 
-    color: var(--dark-text1);
+    color:var(--dark-900);
 }
-.navbar-dark.a{
-    color: var(--dark-800);
+.navbar-dark a{
+    color:var(--dark-900) !important;
 }
 .second-dark{
     background-color: var(--dark-600);
     color: var(--dark-text1);
 }
 .qualification_active.dark{
-    color: #fff;
+   color: #fff;
+}
+.text_dark{
+    color: var(--dark-text2);
 }
 .qualification_rounder.dark,
 .qualification_line.dark{
@@ -1269,9 +1272,12 @@ input[type="checkbox"]{
         width: 90%;
     }
     .skills{
-        padding-top: 4rem;
-        margin-bottom: 5rem;
+       
+        padding-top: 8rem;
+        margin-bottom: 1rem;
+        height: auto;
     }
+   
     .sobre-direito{
         width: 100%;
     }
@@ -1293,7 +1299,7 @@ input[type="checkbox"]{
     }
     .qualification{
 
-        padding-left: 2rem;
+        padding: 1rem;
     }
     .rodape{
         display: flex;
@@ -1307,7 +1313,7 @@ input[type="checkbox"]{
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     body{
         width: 100vw;
         height: auto;
@@ -1331,6 +1337,59 @@ input[type="checkbox"]{
         gap: 2rem;
         padding: 0;
     }
+}
+@media (max-width: 480px) {
+    
+    .text-normal{
+        text-align:  center;
+    }
+    h1{
+        text-align: center;
+    }
+    .bg-effect.home-button{
+        width: 150px;
+        margin: 0;
+        padding: 0;
+    }
+    .fundo-botao{
+       
+        padding: 0;
+    }
+  
+   
+}
+@media (max-width: 420px) {
+
+    .container-apresent .text-normal{
+        text-align:  center;
+        font-size: 0.8rem;
+    }
+    .container-apresent h3{
+        font-size: 0.8rem;
+    }
+    .container-apresent h1{
+        font-size: 1.7rem;
+    }
+ 
+    .bg-effect.home-button{
+        width: 100px;
+        margin: 0;
+        padding: 0;
+        font-size: 0.5rem;
+    }
+    .bg-effect.home-button a{
+      
+        font-size: 1rem;
+    }
+    .fundo-botao{
+       
+        padding: 0;
+    }
+    .skills_container{
+        width: 85%;
+    }
+    
+   
 }
 @media (max-width: 200px) {
     body{

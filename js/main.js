@@ -401,7 +401,7 @@ function loadThemaProject(){
 function togleDarkMode(){
     document.body.classList.toggle('dark');
     document.querySelector('header').classList.toggle('dark');
-    document.querySelector('h3').classList.toggle('dark');
+    document.querySelector('h3').classList.toggle('text_dark');
     document.querySelector('nav').classList.toggle('navbar-dark');
     document.querySelector('.bg-effect').classList.toggle('bg-dark')
     document.querySelector('.home').classList.toggle('second-dark')
