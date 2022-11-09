@@ -782,6 +782,11 @@ header .navbar a:hover{
     flex-wrap: wrap;
     width: 90%;
     height: auto;
+    padding-bottom: 2rem;
+    
+}
+.contato.dark .dados-contato{
+    border-bottom: 1px solid #494949;
 }
 .contato-info{
     width: 45%;
@@ -847,6 +852,7 @@ form{
     background-color: transparent;
     border: 2px solid #666;
     width: 100%;
+    font-size: 1.2rem;
 }
 .row-form textarea{
     padding: 10px 20px;
@@ -854,6 +860,7 @@ form{
     width: 100%;
     background-color: transparent;
     border: 2px solid #666;
+    font-size: 1.2rem;
 }
 .row-form label{
     font-size: 1.2rem;
@@ -865,6 +872,12 @@ form{
 
 .contato.dark ::placeholder {
     font-size: 1.2rem;
+    color: var(--dark-text1);
+  }
+  .contato.dark input{
+    color: var(--dark-text1);
+  }
+  .contato.dark textarea{
     color: var(--dark-text1);
   }
 .rodape{
