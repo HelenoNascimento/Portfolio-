@@ -278,6 +278,7 @@ const createProjeto = (todosProejtos) =>{
    
 
     const outroProjeto = createElement ('div', 'outro-projeto');
+    
     const projetoImage = createElement('div', 'projeto-image');
     const imagem = createElement('img', 'imagem-projeto');
         imagem.setAttribute('src', todosProejtos.imagem)
@@ -407,6 +408,7 @@ function togleDarkMode(){
     document.querySelector('.home').classList.toggle('second-dark')
     document.querySelector('.sobre-direito').classList.toggle('dark');
     document.querySelector('.skills').classList.toggle('second-dark');
+    document.querySelector('.contato').classList.toggle('dark');
     document.querySelector('.qualification_active').classList.toggle('dark');
    // document.querySelector('.uil-bars').classList.toggle('dark');
    // document.querySelector('.navbar').classList.toggle('dark');
