@@ -1,4 +1,7 @@
 
+import {allProjects} from './projetos.js'
+//const {allProjects} = require('projetos');
+console.log(allProjects)
 
 //*************************MENU*************************************************** */
 
@@ -34,12 +37,13 @@ window.onscroll = ()=>{
 
 
 
-const skillsContent = document.querySelectorAll('.skills_content');
+/*const skillsContent = document.querySelectorAll('.skills_content');
 const skillsHeader = document.querySelectorAll('.skills_header');
 
 function toglleSkills(){
     let itemClass = this.parentNode.className;
-   // console.log(skillsContent.length)
+    console.log(itemClass)
+    console.log(skillsContent.length)
     for(i = 0; i< skillsContent.length; i++){
       
         skillsContent[i].className = "skills_content skills_close";
@@ -54,7 +58,7 @@ skillsHeader.forEach((element) => {
     console.log("teste")
     element.addEventListener('click',toglleSkills)
     
-});
+});*/
     
 /* =====================QUALIFICAÇÕES ==========================*/
 const tabs = document.querySelectorAll('[data-target]');
@@ -76,7 +80,7 @@ tabs.forEach(tab =>{
 })
 
 /* =====================slides projetos ==========================*/
-let currentSlide = 1;
+let currentSlide = 2;
 let marge = 600;
 let totalSlides = document.querySelectorAll('.slider--item').length;
 //console.log(totalSlides)
@@ -84,6 +88,11 @@ document.querySelector(".slider--width").style.width = `calc(450px * ${totalSlid
 
 //document.querySelector(".slider--controls").style.height =
   //   `${document.querySelector(".projeto").clientHeight}px`;
+
+ let prev = document.querySelector('.goPrev');
+ prev.addEventListener('click', goPrev) 
+ let next = document.querySelector('.goNext');
+ next.addEventListener('click', goNext);
 
 function goPrev(){
     currentSlide --;
@@ -121,7 +130,7 @@ function updateMargin() {
     }else if(larguraTela >550 && larguraTela <650){
         newMargin = (currentSlide * document.body.clientWidth) /1.5;
     }else{
-        newMargin = (currentSlide * document.body.clientWidth) ;
+        newMargin = (currentSlide * document.body.clientWidth)/0.65 ;
     }
     
    
@@ -312,7 +321,8 @@ const createProjeto = (todosProejtos) =>{
 
 const carregarProjeto =() =>{
 
-    projetosReact.forEach((pj) =>{
+   projetosReact.forEach((pj) =>{
+       // allProjects.forEach((pj) =>{
         const projet = createProjeto(pj);
         projetos.appendChild(projet);
         console.log(projet)
@@ -324,25 +334,74 @@ const items_projeto = document.querySelectorAll('.outro-projeto');
 
 console.log(items_projeto.length)
 
+
+
+let botaoJs= document.querySelector('.btn-js');
+botaoJs.addEventListener('click',carregaJavascript);
+let botaoReact = document.querySelector('.btn-react');
+botaoReact.addEventListener('click',projetoReact);
+let botaoType = document.querySelector('.btn-typeScript');
+botaoType.addEventListener('click',carregaTypeScript);
+
+let botaoTailwind = document.querySelector('.btn-tailwind');
+botaoTailwind.addEventListener('click',carregaTailwind);
+
+
+
 function projetoReact () {
    
     limpaDados();
-    
-    projetosReact.forEach((pj) =>{
-        const projet = createProjeto(pj);
-        projetos.appendChild(projet);
-        console.log(projet)
+    allProjects.forEach((pj) =>{
+        pj.tec.forEach((react)=>{
+            console.log(react)
+            if(react == "React"){
+                let projet = createProjeto(pj);
+               
+                projetos.appendChild(projet);
+            }
+        })
     })
-    console.log(items_projeto.length)
     loadThemaProject();
 }
 function carregaJavascript(){
     limpaDados();
-   
-    projetosJavaScript.forEach((pj) =>{
-        const projet = createProjeto(pj);
-        projetos.appendChild(projet);
-        console.log(projet)
+    allProjects.forEach((pj) =>{
+        pj.tec.forEach((react)=>{
+            console.log(react)
+            if(react == "JavaScript"){
+                let projet = createProjeto(pj);
+               
+                projetos.appendChild(projet);
+            }
+        })
+    })
+    loadThemaProject();
+}
+function carregaTypeScript(){
+    limpaDados();
+    allProjects.forEach((pj) =>{
+        pj.tec.forEach((react)=>{
+            console.log(react)
+            if(react == "Typescript"){
+                let projet = createProjeto(pj);
+               
+                projetos.appendChild(projet);
+            }
+        })
+    })
+    loadThemaProject();
+}
+function carregaTailwind(){
+    limpaDados();
+    allProjects.forEach((pj) =>{
+        pj.tec.forEach((react)=>{
+            console.log(react)
+            if(react == "Tailwind"){
+                let projet = createProjeto(pj);
+               
+                projetos.appendChild(projet);
+            }
+        })
     })
     loadThemaProject();
 }
