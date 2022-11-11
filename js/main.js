@@ -231,6 +231,8 @@ const createProjeto = (todosProejtos) =>{
 
 
 const carregarProjeto =() =>{
+    
+    loadThemaProject();
     projetoReact ();
    
 }
@@ -347,7 +349,7 @@ loadTheme();
 function loadThemaProject(){
     const darkMode = localStorage.getItem('dark');
   
-    if(darkMode == 1){
+    if(darkMode === 1){
         const projetos = document.querySelectorAll('.outro-projeto');
         projetos.forEach((projeto) =>{
             projeto.classList.add('second-dark');
