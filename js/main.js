@@ -1,7 +1,7 @@
 
 import {allProjects} from './projetos.js'
 //const {allProjects} = require('projetos');
-console.log(allProjects)
+
 
 //*************************MENU*************************************************** */
 
@@ -34,31 +34,6 @@ window.onscroll = ()=>{
 
     }
 }
-
-
-
-/*const skillsContent = document.querySelectorAll('.skills_content');
-const skillsHeader = document.querySelectorAll('.skills_header');
-
-function toglleSkills(){
-    let itemClass = this.parentNode.className;
-    console.log(itemClass)
-    console.log(skillsContent.length)
-    for(i = 0; i< skillsContent.length; i++){
-      
-        skillsContent[i].className = "skills_content skills_close";
-       
-    }
-
-    if(itemClass === 'skills_content skills_close'){
-        this.parentNode.className = "skills_content skills_open";
-    }
-}
-skillsHeader.forEach((element) => {
-    console.log("teste")
-    element.addEventListener('click',toglleSkills)
-    
-});*/
     
 /* =====================QUALIFICAÇÕES ==========================*/
 const tabs = document.querySelectorAll('[data-target]');
@@ -135,7 +110,7 @@ function updateMargin() {
     
    
 
-    console.log(newMargin)
+
    // let newMargin = (currentSlide * 450);
     document.querySelector(".slider--width").style.marginLeft = `-${newMargin}px`;
 }
@@ -211,72 +186,8 @@ const todosProejtos  = [
     'calculadoraImc',
     'clone-Netflix',
 ]
-const projetosJavaScript = [
-    {
-        titulo: "Carrinho compra Pizza",
-        descricao: 'Carrinho de compra pizza, Projeto desenvolvido no curso JavaScript b7web',
-        imagem: 'image/projetos/carrinhoCompraPizza.jpeg',
-        link: 'https://github.com/HelenoNascimento/Carrinho-compraJS'
-    },{
-        titulo: "Jogo da Memoria",
-        descricao: 'Jogo da memoria ',
-        imagem: 'image/projetos/jogoMemoria.jpeg',
-        link: 'https://github.com/HelenoNascimento/JogoMemoria'
-    },{
-        titulo: "Consulta Cep",
-        descricao: 'Desenvolvido um sitema para consultar CEP, pela API viaCEP ',
-        imagem: 'image/projetos/ConsultaCep.jpeg',
-        link: 'https://github.com/HelenoNascimento/ConsultaCep'
-    },{
-        titulo: "Vitrine Bicicleta",
-        descricao: 'Uma vitrine para demonstrar biciletas ',
-        imagem: 'image/projetos/vitrineBicileta.jpeg',
-        link: 'https://github.com/HelenoNascimento/Vitrine-Bicileta'
-    },{
-        titulo: "Poke Dex",
-        descricao: 'Projeto desenvolvido em uma live no youtube',
-        imagem: 'image/projetos/pokedex.jpeg',
-        link: 'https://github.com/HelenoNascimento/Pokedex'
-    }, {
-        titulo: "Urna eletronica",
-        descricao: 'Projeto desenvolvido no curso JavaScript b7web',
-        imagem: 'image/projetos/urna.jpeg',
-        link: 'https://github.com/HelenoNascimento/Urna-eletronica'
-    },
-]
-const projetosReact = [
-    {
-        titulo: "Clone Netflix",
-        descricao: 'Projeto desenvolvido uma live ministrada pelo b7web',
-        imagem: 'image/projetos/CloneNetflix.jpeg',
-        link: 'https://github.com/HelenoNascimento/Clone-Netflix'
-    }, {
-        titulo: "Jogo Memoria",
-        descricao: 'Projeto desenvolvido no curso React b7web',
-        imagem: 'image/projetos/ReactMemoria.jpeg',
-        link: 'https://github.com/HelenoNascimento/Jogo-memoria-react'
-    },{
-        titulo: "Ignite Lab",
-        descricao: "Projeto desenvolvido durante um Ignite Lab",
-        imagem: 'image/projetos/IgniteLab.jpeg',
-        link: 'https://github.com/HelenoNascimento/Event-Plataform'
-    } , {
-        titulo: "Calculadora IMC",
-        descricao: 'Projeto desenvolvido no curso React b7web',
-        imagem: 'image/projetos/reactIMC.jpeg',
-        link: 'https://github.com/HelenoNascimento/Calculadora-imc'
-    }, {
-        titulo: "Movies Lib",
-        descricao: 'Projeto desenvolvido uma live do youtube',
-        imagem: 'image/projetos/MoviesLib.jpeg',
-        link: 'https://github.com/HelenoNascimento/Movies_lib'
-    }, {
-        titulo: "Login React Ignite",
-        descricao: 'Projeto desenvolvido durante um Ignite Lab',
-        imagem: 'image/projetos/reactIgnite.jpeg',
-        link: 'https://github.com/HelenoNascimento/Ignite-lab-desing-system'
-    }
-]
+
+
 const createElement  = (tag, className) =>{
     const element = document.createElement(tag);
     element.className = className;
@@ -320,19 +231,13 @@ const createProjeto = (todosProejtos) =>{
 
 
 const carregarProjeto =() =>{
-
-   projetosReact.forEach((pj) =>{
-       // allProjects.forEach((pj) =>{
-        const projet = createProjeto(pj);
-        projetos.appendChild(projet);
-        console.log(projet)
-    })
+    projetoReact ();
    
 }
 carregarProjeto();
 const items_projeto = document.querySelectorAll('.outro-projeto');
 
-console.log(items_projeto.length)
+
 
 
 
@@ -353,7 +258,7 @@ function projetoReact () {
     limpaDados();
     allProjects.forEach((pj) =>{
         pj.tec.forEach((react)=>{
-            console.log(react)
+          
             if(react == "React"){
                 let projet = createProjeto(pj);
                
@@ -367,7 +272,7 @@ function carregaJavascript(){
     limpaDados();
     allProjects.forEach((pj) =>{
         pj.tec.forEach((react)=>{
-            console.log(react)
+           
             if(react == "JavaScript"){
                 let projet = createProjeto(pj);
                
@@ -381,7 +286,7 @@ function carregaTypeScript(){
     limpaDados();
     allProjects.forEach((pj) =>{
         pj.tec.forEach((react)=>{
-            console.log(react)
+          
             if(react == "Typescript"){
                 let projet = createProjeto(pj);
                
@@ -395,7 +300,7 @@ function carregaTailwind(){
     limpaDados();
     allProjects.forEach((pj) =>{
         pj.tec.forEach((react)=>{
-            console.log(react)
+           
             if(react == "Tailwind"){
                 let projet = createProjeto(pj);
                
@@ -411,7 +316,7 @@ function limpaDados(){
     items_projeto.forEach((item) =>{
         item.remove();
     })
-    console.log(items_projeto.length)
+  
 }
 //************************************TEMA*********************** */
 
@@ -441,7 +346,7 @@ loadTheme();
 
 function loadThemaProject(){
     const darkMode = localStorage.getItem('dark');
-   console.log(darkMode)
+  
     if(darkMode == 1){
         const projetos = document.querySelectorAll('.outro-projeto');
         projetos.forEach((projeto) =>{

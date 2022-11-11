@@ -504,7 +504,36 @@ header .navbar a:hover{
 .skills_percentage{
     height:  5px;
     border-radius:  0.25rem;
+   
 }
+@keyframes html {
+    0%{ width: 0px; }85%{ width: 90%;}
+}
+@keyframes css {
+    0%{ width: 0px; }85%{ width: 80%;}
+}
+@keyframes js {
+    0%{ width: 0px; }85%{ width: 60%;}
+}
+@keyframes tailwind {
+    0%{ width: 0px; }85%{ width: 30%;}
+}
+@keyframes react {
+    0%{ width: 0px; }85%{ width: 70%;}
+}
+@keyframes node {
+    0%{ width: 0px; }85%{ width: 50%;}
+}
+@keyframes mysql {
+    0%{ width: 0px; }85%{ width: 60%;}
+}
+@keyframes fire {
+    0%{ width: 0px; }85%{ width: 40%;}
+}
+@keyframes full {
+    0%{ width: 0px; }85%{ width: 100%;}
+}
+
 
 .skills_bar{
     background-color: rgb(151, 145, 145);
@@ -512,43 +541,57 @@ header .navbar a:hover{
 .skills_percentage{
     display: block;
     background-color: black;
+    
 }
+
 .skills_html{
     width: 90%;
+    animation: html 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_css{
     width: 80%;
+    animation: css 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_js{
     width: 60%;
+    animation: js 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_tailwind{
     width: 30%;
+    animation: tailwind 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_react{
     width: 70%;
+    animation: react 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_node{
     width: 55%;
+    animation: node 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_mysql{
     width: 60%;
+    animation: mysql 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_adaptabilidade{
-    width: 80%;
+    width: 100%;
+    animation: full 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_pontualidade{
-    width: 95%;
+    width: 100%;
+    animation: full 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_fireBase,
 .skills_java{
     width: 40%;
+    animation: fire 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_comprometimento{
-    width: 90%;
+    width: 100%;
+    animation: full 4s  linear 1.75s alternate-reverse infinite;
 }
 .skills_equipe{
-    width: 82%;
+    width: 100%;
+    animation: full 4s  linear 1.75s alternate-reverse infinite;
 }
 
 .skills_close .skills_list{
